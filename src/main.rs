@@ -184,7 +184,7 @@ struct Reqtsv {
 	/// directory containing project
 	project: PathBuf,
 	#[argh(switch, short = 'i')]
-	/// print version number and exit
+	/// initialize project and exit
 	init: bool,
 }
 

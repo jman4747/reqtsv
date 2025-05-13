@@ -10,7 +10,13 @@ path = "src/main.rs"
 [lib]
 path = "src/lib.rs"
 
+[workspace]
+members = ["crates/*"]
+
 [dependencies]
+reqtsv-project = { path = "./crates/reqtsv-project", version = "*"}
+reqtsv-lib = { path = "./crates/reqtsv-lib", version = "*"}
+
 anyhow = "1.0.98"
 argh = "0.1.13"
 chrono = { version = "0.4.41", features = ["serde"] }
@@ -23,5 +29,6 @@ serde = { version = "1.0.219", features = ["derive"] }
 strum = { version = "0.27.1", features = ["derive"] }
 strum_macros = "0.27.1"
 tempdir = "0.3.7"
+thiserror = "2.0.12"
 toml = "0.8.22"
 walkdir = "2.5.0"
