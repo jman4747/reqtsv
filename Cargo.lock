@@ -837,6 +837,26 @@ dependencies = [
 ]
 
 [[package]]
+name = "reqtsv-component"
+version = "0.1.0"
+
+[[package]]
+name = "reqtsv-html-compiler"
+version = "0.1.0"
+dependencies = [
+ "argh",
+ "base16ct",
+ "chrono",
+ "const_format",
+ "env_logger",
+ "log",
+ "maud",
+ "reqtsv-lib",
+ "sha3",
+ "thiserror",
+]
+
+[[package]]
 name = "reqtsv-lib"
 version = "0.1.0"
 dependencies = [

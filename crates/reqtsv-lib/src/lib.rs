@@ -146,6 +146,7 @@ pub struct Project {
 	pub requirements: Vec<Requirement>,
 	pub raw_requirements: Box<str>,
 	pub requirement_file: File,
+	pub project_title: Box<str>,
 }
 
 pub fn get_project_root(maybe_root: impl AsRef<Path>) -> Result<Project, GetProjectRootErr> {
@@ -219,6 +220,8 @@ pub fn get_project_root(maybe_root: impl AsRef<Path>) -> Result<Project, GetProj
 		requirement_file,
 		raw_components,
 		raw_requirements,
+		// TODO: Need reqtsv.toml
+		project_title: format!("TODO Placeholder Title").into_boxed_str(),
 	})
 }
 

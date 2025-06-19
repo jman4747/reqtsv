@@ -1,0 +1,24 @@
+[package]
+name = "reqtsv-html-compiler"
+version = "0.1.0"
+edition = "2024"
+
+[[bin]]
+name = "reqtsv-html-compiler"
+path = "src/main.rs"
+
+[lib]
+path = "src/lib.rs"
+
+[dependencies]
+reqtsv-lib = { path = "../reqtsv-lib", version = "*"}
+
+argh = "0.1.13"
+const_format = "0.2.34"
+thiserror = "2.0.12"
+maud = "0.27.0"
+log = "0.4.27"
+env_logger = "0.11.8"
+sha3 = "0.10.8"
+base16ct = {version = "0.2.0", features = ["std", "alloc"] }
+chrono = { version = "0.4.41", features = ["serde"] }
